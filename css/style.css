@@ -1,5 +1,8 @@
-ersal Selector */
-*, /* All elements*/
+html {
+  box-sizing: border-box
+}
+
+/* The Universal Selector */
 *::before, /* All ::before pseudo-elements */
 *::after { /* All ::after pseudo-elements */
   /* height & width will now include border & padding by default
@@ -19,4 +22,73 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
+  background-color: rgb(6, 124, 108);
+}
+
+body{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  margin: 100px ;
+
+
+  
+}
+main{
+  background-color: white;
+  min-height: 100hv;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+div {
+  display: flex;
+  justify-content: flex-end;
+  align-self: end;
+
+}
+h1{
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  justify-content: center;
+  align-items: end;
+  border-radius: 60px;
+  margin: 0 40px;
+  justify-content: end;
+  /* background-color: white; */
+}
+
+#occupation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(223, 219, 219);
+
+}
+
+#contact{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-end;
+
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    /* tablet - two column display */
+    grid-template-columns: 1fr 2fr 2 fr;
+    grid-template-rows: 50px auto 30px;
+    grid-template-areas: "section section";
+  }
 }
