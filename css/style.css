@@ -23,28 +23,23 @@ body {
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
   background-color: rgb(6, 124, 108);
-}
-
-body{
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh; 
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
   margin: 100px ;
-
 
   
 }
 main{
-  background-color: white;
   min-height: 100hv;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  max-width: 600px;
+  width: auto;
+  background-color: rgb(241, 230, 230);
+  border-radius: 5px;
 }
 
 div {
@@ -61,34 +56,76 @@ h1{
 img {
   justify-content: center;
   align-items: end;
+  width: 70px;
+  height: 70px;
   border-radius: 60px;
   margin: 0 40px;
-  justify-content: end;
-  /* background-color: white; */
+  justify-content: center;
+  
 }
 
 #occupation {
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   background-color: rgb(223, 219, 219);
+  width: 200px;
 
+}
+
+#brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 #contact{
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  flex-direction: row;
-  align-items: flex-end;
-
+  align-items: center;
+  
+}
+#one{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(73, 134, 12);
+  background-size: auto;
+  width: 100px;
+  height: 50px;
+  
 }
 
-@media only screen and (min-width: 768px) {
-  body {
-    /* tablet - two column display */
-    grid-template-columns: 1fr 2fr 2 fr;
-    grid-template-rows: 50px auto 30px;
-    grid-template-areas: "section section";
+#two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(96, 160, 32);
+  background-size: auto;
+  width: 100px;
+  height: 50px;
+  box-sizing: content-box;
+  margin: 0px;
+}
+
+@media only screen and (min-width: 768) {
+  #occupation{
+  display: grid;
+  justify-content: end;
+  align-items: center;
+  order: 1;
   }
 }
+
+@media (max-width: 768px) {
+  #three{
+    display: none;
+  }
+  
+     
+} 
+
